@@ -27,10 +27,13 @@ wheels/
 .streamlit/secrets.toml
 .streamlit/config.toml
 
-# Raw data files (exclude raw, include processed)
-data/raw/
+# Data files
+data/raw/*.csv
+data/processed/*.pkl
+data/processed/*.parquet
 *.csv
 *.xlsx
+*.parquet
 
 # Jupyter Notebooks
 .ipynb_checkpoints
@@ -68,16 +71,16 @@ htmlcov/
 # API Keys (safety)
 *_api_key.txt
 secrets.json
-
-# Large files excluded from initial push
-dublin_graph.graphml
-utils/dublin_graph.graphml
-utils/cache/
+/data
+route_popularity_timeseriesv1.geojson
+timed_heatmap.html
+static/route_popularity_timeseries.geojson
+static/route_popularity_timeseries_small.geojson
+*.geojson
 
 # ─────────────────────────────────────────────
-# INCLUDE specific processed files for dashboard
+# ✅ Allow Streamlit app data (only required processed files)
 # ─────────────────────────────────────────────
-
 # First exclude everything in data/processed
 data/processed/
 
@@ -97,3 +100,8 @@ data/processed/
 !data/processed/tab3_routepopularity/*.json
 !data/processed/tab3_routepopularity/*.csv
 !data/processed/tab3_routepopularity/*.geojson
+
+# Large files excluded from initial push
+dublin_graph.graphml
+utils/dublin_graph.graphml
+utils/cache/
