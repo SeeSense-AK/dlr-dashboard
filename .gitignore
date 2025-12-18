@@ -1,0 +1,107 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Streamlit
+.streamlit/secrets.toml
+.streamlit/config.toml
+
+# Data files
+data/raw/*.csv
+data/processed/*.pkl
+data/processed/*.parquet
+*.csv
+*.xlsx
+*.parquet
+
+# Jupyter Notebooks
+.ipynb_checkpoints
+*.ipynb
+
+# Environment variables
+.env
+.env.local
+config_local.py
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Cache
+.cache/
+*.cache
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# API Keys (safety)
+*_api_key.txt
+secrets.json
+/data
+route_popularity_timeseriesv1.geojson
+timed_heatmap.html
+static/route_popularity_timeseries.geojson
+static/route_popularity_timeseries_small.geojson
+*.geojson
+
+# ─────────────────────────────────────────────
+# ✅ Allow Streamlit app data (only required processed files)
+# ─────────────────────────────────────────────
+!data/
+!data/processed/
+!data/processed/tab1_hotspots/
+!data/processed/tab2_trend/
+!data/processed/tab1_hotspots/*.csv
+!data/processed/tab1_hotspots/*.geojson
+!data/processed/tab2_trend/route_popularity/
+!data/processed/tab2_trend/route_popularity/*.csv
+!data/processed/tab2_trend/route_popularity/*.geojson
+!data/processed/tab2_trend/timed_heatmap.html
+!data/processed/tab2_trend/dublin-cycleways.geojson
+
+# 🧹 Exclude heavy and unnecessary files/folders
+data/processed/tab2_trend/hardbrake/
+data/processed/tab2_trend/pothole/
+data/processed/tab2_trend/swerve/
+data/processed/tab2_trend/route_popularity_timeseries.geojson
+verify_tab1_refactor.py
+verify_tab1_ui.py
+
+# Large files excluded from initial push
+dublin_graph.graphml
+utils/dublin_graph.graphml
+utils/cache/

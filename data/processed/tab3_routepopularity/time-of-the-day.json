@@ -1,0 +1,93 @@
+[
+  {
+    "street": "Blackthorn Avenue / Burton Hall Road / Blackthorn Road / Blackthorn Drive",
+    "time_of_day": {
+      "morning": 35,
+      "afternoon": 20,
+      "evening": 32,
+      "night": 13
+    },
+    "peak_non_peak": {
+      "peak": 62,
+      "non_peak": 38
+    }
+  },
+  {
+    "street": "Leopardstown Road",
+    "time_of_day": {
+      "morning": 34,
+      "afternoon": 21,
+      "evening": 31,
+      "night": 14
+    },
+    "peak_non_peak": {
+      "peak": 60,
+      "non_peak": 40
+    }
+  },
+  {
+    "street": "Clonskeagh Road",
+    "time_of_day": {
+      "morning": 33,
+      "afternoon": 22,
+      "evening": 31,
+      "night": 14
+    },
+    "peak_non_peak": {
+      "peak": 59,
+      "non_peak": 41
+    }
+  },
+  {
+    "street": "Nutley Lane",
+    "time_of_day": {
+      "morning": 36,
+      "afternoon": 19,
+      "evening": 33,
+      "night": 12
+    },
+    "peak_non_peak": {
+      "peak": 64,
+      "non_peak": 36
+    }
+  },
+  {
+    "street": "Leopardstown Avenue",
+    "time_of_day": {
+      "morning": 32,
+      "afternoon": 23,
+      "evening": 30,
+      "night": 15
+    },
+    "peak_non_peak": {
+      "peak": 57,
+      "non_peak": 43
+    }
+  },
+  {
+    "street": "West Pier",
+    "time_of_day": {
+      "morning": 18,
+      "afternoon": 32,
+      "evening": 28,
+      "night": 22
+    },
+    "peak_non_peak": {
+      "peak": 38,
+      "non_peak": 62
+    }
+  },
+  {
+    "street": "Puck's Castle Lane",
+    "time_of_day": {
+      "morning": 15,
+      "afternoon": 28,
+      "evening": 25,
+      "night": 32
+    },
+    "peak_non_peak": {
+      "peak": 35,
+      "non_peak": 65
+    }
+  }
+]

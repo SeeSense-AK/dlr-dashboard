@@ -1,0 +1,110 @@
+{
+  "West Pier": {
+    "day_totals": {
+      "Monday": 1963,
+      "Tuesday": 1695,
+      "Wednesday": 1221,
+      "Thursday": 14,
+      "Friday": 25,
+      "Saturday": 72,
+      "Sunday": 1
+    },
+    "total_cyclists": 4991,
+    "variants_found": [
+      "West Pier"
+    ]
+  },
+  "Leopardstown Road": {
+    "day_totals": {
+      "Monday": 19457,
+      "Tuesday": 31017,
+      "Wednesday": 34105,
+      "Thursday": 31234,
+      "Friday": 15607,
+      "Saturday": 3788,
+      "Sunday": 2738
+    },
+    "total_cyclists": 137946,
+    "variants_found": [
+      "Leopardstown Road"
+    ]
+  },
+  "Puck's Castle Lane": {
+    "day_totals": {
+      "Monday": 1,
+      "Tuesday": 1,
+      "Wednesday": 1,
+      "Thursday": 5,
+      "Friday": 269,
+      "Saturday": 968,
+      "Sunday": 8
+    },
+    "total_cyclists": 1253,
+    "variants_found": [
+      "Puck's Castle Lane"
+    ]
+  },
+  "Blackthorn Avenue / Burton Hall Road / Blackthorn Road / Blackthorn Drive": {
+    "day_totals": {
+      "Monday": 62942,
+      "Tuesday": 69905,
+      "Wednesday": 66926,
+      "Thursday": 59891,
+      "Friday": 22087,
+      "Saturday": 6685,
+      "Sunday": 6097
+    },
+    "total_cyclists": 294533,
+    "variants_found": [
+      "Blackthorn Avenue",
+      "Burton Hall Road",
+      "Blackthorn Road",
+      "Blackthorn Drive"
+    ]
+  },
+  "Leopardstown Avenue": {
+    "day_totals": {
+      "Monday": 335,
+      "Tuesday": 506,
+      "Wednesday": 519,
+      "Thursday": 521,
+      "Friday": 448,
+      "Saturday": 174,
+      "Sunday": 62
+    },
+    "total_cyclists": 2565,
+    "variants_found": [
+      "Leopardstown Avenue"
+    ]
+  },
+  "Clonskeagh Road": {
+    "day_totals": {
+      "Monday": 20581,
+      "Tuesday": 24570,
+      "Wednesday": 25834,
+      "Thursday": 25315,
+      "Friday": 12729,
+      "Saturday": 5418,
+      "Sunday": 5554
+    },
+    "total_cyclists": 120001,
+    "variants_found": [
+      "Clonskeagh Road"
+    ]
+  },
+  "Nutley Lane": {
+    "day_totals": {
+      "Monday": 12115,
+      "Tuesday": 11158,
+      "Wednesday": 14668,
+      "Thursday": 13510,
+      "Friday": 1215,
+      "Saturday": 487,
+      "Sunday": 858
+    },
+    "total_cyclists": 54011,
+    "variants_found": [
+      "Nutley Lane"
+    ]
+  }
+}
