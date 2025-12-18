@@ -27,12 +27,10 @@ wheels/
 .streamlit/secrets.toml
 .streamlit/config.toml
 
-# Data files
-data/raw/*.csv
-data/processed/*.pkl
-data/processed/*.parquet
-*.xlsx
+# Exclude formats
 *.parquet
+*.xlsx
+data/raw/
 
 # Jupyter Notebooks
 .ipynb_checkpoints
@@ -67,38 +65,17 @@ logs/
 .coverage
 htmlcov/
 
-# API Keys (safety)
+# API Keys
 *_api_key.txt
 secrets.json
+
+# Specific files to exclude
 route_popularity_timeseriesv1.geojson
 timed_heatmap.html
 static/route_popularity_timeseries.geojson
 static/route_popularity_timeseries_small.geojson
 
-# ─────────────────────────────────────────────
-# ✅ Allow Streamlit app data (only required processed files)
-# ─────────────────────────────────────────────
-# First exclude everything in data/processed
-data/processed/
-
-# Then include specific files and directories we need
-!data/processed/tab1_hotspots/
-!data/processed/tab2_abnormaltrend/
-!data/processed/tab3_routepopularity/
-
-# Include specific file types in these directories
-!data/processed/*.geojson
-!data/processed/tab1_hotspots/*.json
-!data/processed/tab1_hotspots/*.csv
-!data/processed/tab1_hotspots/*.geojson
-!data/processed/tab2_abnormaltrend/*.json
-!data/processed/tab2_abnormaltrend/*.csv
-!data/processed/tab2_abnormaltrend/*.geojson
-!data/processed/tab3_routepopularity/*.json
-!data/processed/tab3_routepopularity/*.csv
-!data/processed/tab3_routepopularity/*.geojson
-
-# Large files excluded from initial push
+# Large files
 dublin_graph.graphml
 utils/dublin_graph.graphml
 utils/cache/
