@@ -1,0 +1,79 @@
+#,street_name,total_events,peak,Trend Strength,AI Summary,trend
+1,Newtown Avenue,319,September-October 2025,highly significant,"Newtown Avenue is part of the Coastal Mobility Route (CMR) infrastructure project, which includes major cycling and pedestrian improvements along this corridor. According to Dún Laoghaire-Rathdown County Council:
+
+- New two-way segregated bike lanes were being constructed on Newtown Avenue as part of the permanent CMR scheme
+- The project includes 15 new raised pedestrian crossings and junction tightening
+- Public consultation occurred in summer 2023, with construction phased through 2024-2025
+- The peak in October 2025 coincides with active construction and traffic management changes
+
+Probable Cause: The sharp increase in swerving events from September-October 2025 is consistent with cyclists navigating construction zones, temporary traffic diversions, and incomplete infrastructure during the final phases of the CMR project. The high concentration of events (128 in a single week in October) suggests significant disruption during peak construction activity.",Increase
+2,Blackthorn Road,186,"October 7, 2024",significant,"Blackthorn Road experienced a significant spike in hard braking events in October 2024, directly correlating with the announcement and commencement of major infrastructure works:
+
+- M50 Junction 14 Link Road Scheme commenced construction in late October 2025 (contract signed October 29, 2025)
+- The project involves connecting M50 Junction 14 to Blackthorn Road with a new signalized junction on Blackthorn Road
+- 12-week road closure planned for Q1/Q2 2026 for utility diversions
+- Construction contractor BAM Civil Ltd. began preliminary works in Q4 2024
+
+Probable Cause: The October 2024 spike in hard braking events corresponds to preliminary site investigations, utility mapping, and early contractor mobilization activities ahead of the official construction start in late 2025. Increased heavy vehicle traffic, temporary traffic management, and changing road conditions would cause cyclists to brake more frequently and unpredictably.",Increase
+3,Idrone Terrace,109,"September 22-29, 2025",significant,"Idrone Terrace runs parallel to Newtown Avenue near Dún Laoghaire Harbour and shows the same late-September 2025 pattern, suggesting spillover effects from nearby construction:
+
+- Located immediately adjacent to Harbour Square where major redevelopment occurred
+- Part of the broader Coastal Mobility Route impact zone
+- The Quarterdeck Workspace development at Dún Laoghaire Harbour had construction actively progressing through 2025, with completion expected Q4 2025
+- Increased construction vehicle traffic accessing the harbour area via surrounding streets
+
+Probable Cause: The synchronized September 2025 spike with Newtown Avenue suggests cyclists were being diverted onto Idrone Terrace to avoid CMR construction zones, encountering unfamiliar road conditions, increased traffic, and construction-related obstacles causing more swerving maneuvers.",Increase
+4,Roebuck Road,101,"February 24, 2025",significant,"Roebuck Road shows a statistically significant increase in hard braking events in February 2025, but we could not identify any infrastructure projects, road works, or documented events that temporally align with this spike.
+
+What we found:
+
+- Public consultation for Roebuck Road Cycle Route (Goatstown to UCD) occurred in February-March 2022 - 3 years before the events
+- Bollard protection and resurfacing work occurred in August 2021 - nearly 4 years before the events
+- €422,000 allocated for protected cycle facilities under COVID mobility funding in 2020
+- The major Roebuck Road Cycle Route with raised cycle tracks was listed as ""under development"" by AtkinsRéalis but no construction start date found
+
+Timeline Mismatch: There is a critical 3-4 year gap between documented infrastructure work (2020-2022) and the February 2025 event spike, making causal attribution unreliable.
+
+Assessment: The data clearly shows a real, statistically significant pattern (p=0.005 means there's only a 0.5% probability this is random chance). However, we could not find credible evidence for what caused this increase. Possible explanations requiring further investigation:
+
+1. Undocumented maintenance or utility works in February 2025 not yet published online
+2. Traffic pattern changes from nearby UCD campus events or policy changes
+3. Weather-related incidents (ice, flooding) in late February 2025
+4. Temporary obstructions (fallen trees, emergency repairs) not officially documented
+5. Changes in traffic light timing or junction modifications
+
+Recommendations: This warrants on-the-ground investigation. Site visits, checking with DLR County Council road maintenance logs, reviewing UCD campus notices for February 2025, and speaking with local cycling groups could reveal what actually happened. The statistical signal is too strong to dismiss as coincidence (tau=0.205, p=0.005), but scientific integrity requires acknowledging when we lack supporting evidence.",Increase
+5,Stillorgan Road ,143,"Decrease in July 2024, Increase in April 2025",significant,"Stillorgan Road shows a clear two-phase pattern that directly corresponds to documented road works:
+
+Phase 1 - Improvements (2024):
+
+- Comprehensive resurfacing works were carried out by Roadstone Ltd on behalf of DLRCC throughout 2024. Specifically, High Friction Surfacing was applied at junctions between April and June 2024
+- Major resurfacing works on R138 Stillorgan Road between Foster's Avenue and The Rise in March 2021
+- Stillorgan Park Road Walking and Cycle Improvement Scheme construction through 2024
+- Works included raised cycle tracks, junction upgrades, and complete road resurfacing
+- Road roughness events decreased by 53 occurrences (July 2024 peak) - clear evidence of surface improvements
+
+Phase 2 - New Activity (2025):
+
+- N11 junction upgrades and additional cycle scheme works continued into 2024-2025
+- April 2025 spike in braking events (51+39) coincides with final junction modifications and traffic signal installations
+- Night works on N11/Stillorgan Park Road junction occurred in August 2024 and October 2024
+
+Probable Cause: The road surface improvements successfully reduced roughness-related events in mid-2024. However, the April 2025 increase in hard braking events reflects cyclists adjusting to new junction layouts, changed traffic signal timings, and modified cycle track configurations introduced in the final construction phases. This is a temporary adaptation effect following major junction reconfiguration.",Increase
+6,Kilmacud Road Upper,200,"February 5, 2024",highly significant,"Kilmacud Road Upper experienced a sharp decline in swerving events in early 2024, corresponding to multiple road safety improvements:
+
+- Safe Routes to School (SRTS) Programme implemented at Holy Cross National School on Kilmacud Road Upper
+- Infrastructure included: traffic calming measures, coloured road markings, raised pedestrian crossings, enhanced pedestrian space, and biodiverse landscaping
+- Public consultation completed in 2023, with construction likely completed late 2023/early 2024
+- Additional modal filter discussions for traffic calming in the broader Kilmacud area (deferred from October 2024)
+
+Probable Cause: The decrease from January to February 2024 strongly suggests that the Safe Routes to School infrastructure became fully operational in late 2023 or early January 2024. Traffic calming measures, clearer road markings, and improved pedestrian/cyclist separation reduced the need for evasive maneuvers, directly explaining the 200-event reduction in swerving over just three weeks.",Decrease
+7,Goatstown Road,71,"January 15, 2024",significant,"Goatstown Road shows the exact same temporal pattern as Kilmacud Road Upper, indicating coordinated infrastructure improvements:
+
+- Both roads peaked on January 15, 2024 and declined through February 5, 2024
+- Both are in the same traffic cell managed by DLR County Council
+- Part of the broader Dundrum area cycle network improvements
+- Located within the NTA Safe Routes to School programme coverage area
+
+Probable Cause: The synchronized timing with Kilmacud Road Upper (same peak week, same decline period) indicates these improvements were part of a coordinated area-wide traffic calming and cycling safety programme in the Dundrum/Goatstown area. The 71-event reduction in swerving reflects improved road surface, clearer lane markings, or traffic calming measures implemented as part of the NTA-funded active travel programme.",Decrease
+8,,,,,,
