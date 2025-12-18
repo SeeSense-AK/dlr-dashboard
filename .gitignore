@@ -81,25 +81,25 @@ static/route_popularity_timeseries_small.geojson
 # ─────────────────────────────────────────────
 # ✅ Allow Streamlit app data (only required processed files)
 # ─────────────────────────────────────────────
-!data/
-!data/processed/
+# First exclude everything in data/processed
+data/processed/
+
+# Then include specific files and directories we need
 !data/processed/tab1_hotspots/
-!data/processed/tab2_trend/
+!data/processed/tab2_abnormaltrend/
+!data/processed/tab3_routepopularity/
+
+# Include specific file types in these directories
+!data/processed/*.geojson
+!data/processed/tab1_hotspots/*.json
 !data/processed/tab1_hotspots/*.csv
 !data/processed/tab1_hotspots/*.geojson
-!data/processed/tab2_trend/route_popularity/
-!data/processed/tab2_trend/route_popularity/*.csv
-!data/processed/tab2_trend/route_popularity/*.geojson
-!data/processed/tab2_trend/timed_heatmap.html
-!data/processed/tab2_trend/dublin-cycleways.geojson
-
-# 🧹 Exclude heavy and unnecessary files/folders
-data/processed/tab2_trend/hardbrake/
-data/processed/tab2_trend/pothole/
-data/processed/tab2_trend/swerve/
-data/processed/tab2_trend/route_popularity_timeseries.geojson
-verify_tab1_refactor.py
-verify_tab1_ui.py
+!data/processed/tab2_abnormaltrend/*.json
+!data/processed/tab2_abnormaltrend/*.csv
+!data/processed/tab2_abnormaltrend/*.geojson
+!data/processed/tab3_routepopularity/*.json
+!data/processed/tab3_routepopularity/*.csv
+!data/processed/tab3_routepopularity/*.geojson
 
 # Large files excluded from initial push
 dublin_graph.graphml
