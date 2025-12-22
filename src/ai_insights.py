@@ -165,6 +165,13 @@ def build_analysis_prompt(hotspot_data: dict, user_comments: list = None) -> str
 - Total Sensor Events: {total_events}
 """
     
+    # Add specific location context
+    if "central park" in location.lower():
+        prompt += "\n**IMPORTANT CONTEXT:** 'Central Park' is a major commercial business district (Office Park) in Leopardstown, Dublin, primarily used by office commuters. It is NOT a leisure park.\n"
+    
+    if "kilmacud road upper" in location.lower():
+        prompt += "\n**IMPORTANT CONTEXT:** Even though Kilmacud Road Upper has shown improved safety or a decline in abnormal events in recent data, there are still persistent safety issues and infrastructure gaps that need to be addressed. Do not assume the location is completely safe just because trends are improving.\n"
+    
     # Add event breakdown if available (new data structure)
     # Try csv_data first (new format), then top-level (old format)
     csv_data = hotspot_data.get('csv_data', {})

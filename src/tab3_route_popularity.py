@@ -374,7 +374,7 @@ def create_route_detail_card(street_name, row):
         """, unsafe_allow_html=True)
         
         color = row.get('Colour', 'Gray')
-        trips_count = row.get('trips_count', 0)
+        total_volume = row.get('total_volume', 'N/A')
         popularity_change = row.get('popularity_change', 'N/A')
         consistency = row.get('consistency', 'N/A')
         peak_info = row.get('peak', 'No data available')
@@ -410,7 +410,7 @@ def create_route_detail_card(street_name, row):
             st.markdown(f"""
             <div class="metric-card-hover">
                 <div style="font-size: 1.05rem; color: #6b7280; font-weight: 600; margin-bottom: 0.75rem;">Total Volume</div>
-                <div style="font-size: 1.50rem; font-weight: 700; color: #1f2937;">{trips_count:,}</div>
+                <div style="font-size: 1.50rem; font-weight: 700; color: #1f2937;">{total_volume}</div>
             </div>
             """, unsafe_allow_html=True)
         
@@ -508,112 +508,113 @@ def create_route_detail_card(street_name, row):
             </div>
             """, unsafe_allow_html=True)
         
-        # MATPLOTLIB TREND ANALYSIS SECTION - WEEKLY DATA FROM METADATA
-        st.markdown("<div style='margin-bottom: 1.5rem;'></div>", unsafe_allow_html=True)
-        st.markdown("### Trend Analysis")
+        # [BACKBURNER] MATPLOTLIB TREND ANALYSIS SECTION - WEEKLY DATA FROM METADATA
+        # Commented out as requested - to be fixed later
+        # st.markdown("<div style='margin-bottom: 1.5rem;'></div>", unsafe_allow_html=True)
+        # st.markdown("### Trend Analysis")
         
-        # Strip whitespace for matching
-        lookup_street = street_name.strip()
+        # # Strip whitespace for matching
+        # lookup_street = street_name.strip()
         
-        # Check if we have trend data for this street in metadata
-        if lookup_street in street_trends_metadata:
-            street_data = street_trends_metadata[lookup_street]
-            weekly_data = street_data.get('weekly', [])
+        # # Check if we have trend data for this street in metadata
+        # if lookup_street in street_trends_metadata:
+        #     street_data = street_trends_metadata[lookup_street]
+        #     weekly_data = street_data.get('weekly', [])
             
-            if weekly_data and len(weekly_data) > 0:
-                weekly_df = pd.DataFrame(weekly_data)
-                weekly_df['date'] = pd.to_datetime(weekly_df['date'])
-                weekly_df = weekly_df.sort_values('date')
+        #     if weekly_data and len(weekly_data) > 0:
+        #         weekly_df = pd.DataFrame(weekly_data)
+        #         weekly_df['date'] = pd.to_datetime(weekly_df['date'])
+        #         weekly_df = weekly_df.sort_values('date')
                 
-                # Use popularity_score from the new JSON structure
-                score_col = 'popularity_score' if 'popularity_score' in weekly_df.columns else 'daily_popularity'
+        #         # Use popularity_score from the new JSON structure
+        #         score_col = 'popularity_score' if 'popularity_score' in weekly_df.columns else 'daily_popularity'
                 
-                # Filter for 2025 data as requested - keep zero values to show full trend
-                weekly_df_filtered = weekly_df[
-                    (weekly_df['date'] >= '2025-01-01') & 
-                    (weekly_df['date'] <= '2025-12-31')
-                ].copy()
+        #         # Filter for 2025 data as requested - keep zero values to show full trend
+        #         weekly_df_filtered = weekly_df[
+        #             (weekly_df['date'] >= '2025-01-01') & 
+        #             (weekly_df['date'] <= '2025-12-31')
+        #         ].copy()
                 
-                if len(weekly_df_filtered) >= 1: # Show graph even if 1 point exist (for x-axis range)
-                    # Apply 3-week rolling average for smoothing if we have enough points
-                    if len(weekly_df_filtered) >= 3:
-                        weekly_df_filtered['smoothed'] = weekly_df_filtered[score_col].rolling(
-                            window=3, center=True, min_periods=1
-                        ).mean()
-                    else:
-                        weekly_df_filtered['smoothed'] = weekly_df_filtered[score_col]
+        #         if len(weekly_df_filtered) >= 1: # Show graph even if 1 point exist (for x-axis range)
+        #             # Apply 3-week rolling average for smoothing if we have enough points
+        #             if len(weekly_df_filtered) >= 3:
+        #                 weekly_df_filtered['smoothed'] = weekly_df_filtered[score_col].rolling(
+        #                     window=3, center=True, min_periods=1
+        #                 ).mean()
+        #             else:
+        #                 weekly_df_filtered['smoothed'] = weekly_df_filtered[score_col]
                     
-                    # Find peaks on smoothed data
-                    rolling_values = weekly_df_filtered['smoothed'].values
-                    peak_indices = []
-                    for i in range(1, len(rolling_values) - 1):
-                        if rolling_values[i] > rolling_values[i-1] and rolling_values[i] > rolling_values[i+1]:
-                            peak_indices.append(i)
+        #             # Find peaks on smoothed data
+        #             rolling_values = weekly_df_filtered['smoothed'].values
+        #             peak_indices = []
+        #             for i in range(1, len(rolling_values) - 1):
+        #                 if rolling_values[i] > rolling_values[i-1] and rolling_values[i] > rolling_values[i+1]:
+        #                     peak_indices.append(i)
                     
-                    # Create matplotlib figure
-                    fig, ax = plt.subplots(figsize=(12, 5))
+        #             # Create matplotlib figure
+        #             fig, ax = plt.subplots(figsize=(12, 5))
                     
-                    # Plot original weekly data (faint)
-                    ax.plot(weekly_df_filtered['date'], weekly_df_filtered[score_col], 
-                            color="#b7bc27f4", alpha=0.3, linewidth=1.5, marker='o', markersize=4, 
-                            label='Weekly data')
+        #             # Plot original weekly data (faint)
+        #             ax.plot(weekly_df_filtered['date'], weekly_df_filtered[score_col], 
+        #                     color="#b7bc27f4", alpha=0.3, linewidth=1.5, marker='o', markersize=4, 
+        #                     label='Weekly data')
                     
-                    # Plot smoothed trend (bold)
-                    ax.plot(weekly_df_filtered['date'], weekly_df_filtered['smoothed'], 
-                            color='#2563eb', linewidth=3, label='3-week rolling average')
+        #             # Plot smoothed trend (bold)
+        #             ax.plot(weekly_df_filtered['date'], weekly_df_filtered['smoothed'], 
+        #                     color='#2563eb', linewidth=3, label='3-week rolling average')
                     
-                    # Highlight peaks
-                    if peak_indices:
-                        peak_dates = weekly_df_filtered.iloc[peak_indices]['date']
-                        peak_values = weekly_df_filtered.iloc[peak_indices]['smoothed']
-                        ax.scatter(peak_dates, peak_values, 
-                                  color='#dc2626', s=50, zorder=5, marker='D', label='Peaks')
+        #             # Highlight peaks
+        #             if peak_indices:
+        #                 peak_dates = weekly_df_filtered.iloc[peak_indices]['date']
+        #                 peak_values = weekly_df_filtered.iloc[peak_indices]['smoothed']
+        #                 ax.scatter(peak_dates, peak_values, 
+        #                           color='#dc2626', s=50, zorder=5, marker='D', label='Peaks')
                     
-                    # Customize the plot
-                    ax.set_title(f'{street_name} - Weekly Popularity Trend', fontsize=14, fontweight='normal', pad=20)
-                    ax.set_ylabel('Popularity Score', fontsize=11, color='#6b7280')
-                    ax.set_xlabel('Date', fontsize=11, color='#6b7280')
-                    ax.grid(True, alpha=0.3, linestyle='--')
+        #             # Customize the plot
+        #             ax.set_title(f'{street_name} - Weekly Popularity Trend', fontsize=14, fontweight='normal', pad=20)
+        #             ax.set_ylabel('Popularity Score', fontsize=11, color='#6b7280')
+        #             ax.set_xlabel('Date', fontsize=11, color='#6b7280')
+        #             ax.grid(True, alpha=0.3, linestyle='--')
 
-                    # Make axis borders grey
-                    ax.spines['bottom'].set_color('#6b7280')
-                    ax.spines['top'].set_color('#6b7280') 
-                    ax.spines['right'].set_color('#6b7280')
-                    ax.spines['left'].set_color('#6b7280')
+        #             # Make axis borders grey
+        #             ax.spines['bottom'].set_color('#6b7280')
+        #             ax.spines['top'].set_color('#6b7280') 
+        #             ax.spines['right'].set_color('#6b7280')
+        #             ax.spines['left'].set_color('#6b7280')
                     
-                    # Make tick labels grey
-                    ax.tick_params(axis='both', colors='#6b7280')
+        #             # Make tick labels grey
+        #             ax.tick_params(axis='both', colors='#6b7280')
 
-                    # Format x-axis dates - set range from Jan 2025 to Dec 2025
-                    ax.set_xlim([pd.to_datetime('2025-01-01'), pd.to_datetime('2025-12-31')])
-                    ax.xaxis.set_major_locator(mdates.MonthLocator(interval=1))
-                    ax.xaxis.set_major_formatter(mdates.DateFormatter('%b %Y'))
-                    plt.xticks(rotation=45, ha='right')
+        #             # Format x-axis dates - set range from Jan 2025 to Dec 2025
+        #             ax.set_xlim([pd.to_datetime('2025-01-01'), pd.to_datetime('2025-12-31')])
+        #             ax.xaxis.set_major_locator(mdates.MonthLocator(interval=1))
+        #             ax.xaxis.set_major_formatter(mdates.DateFormatter('%b %Y'))
+        #             plt.xticks(rotation=45, ha='right')
                     
-                    # Add legend
-                    ax.legend(loc='upper left', frameon=True, fancybox=True, shadow=True)
+        #             # Add legend
+        #             ax.legend(loc='upper left', frameon=True, fancybox=True, shadow=True)
                     
-                    # Set background to white
-                    fig.patch.set_facecolor('white')
-                    ax.set_facecolor('white')
+        #             # Set background to white
+        #             fig.patch.set_facecolor('white')
+        #             ax.set_facecolor('white')
                     
-                    # Adjust layout
-                    plt.tight_layout()
+        #             # Adjust layout
+        #             plt.tight_layout()
                     
-                    # Display the matplotlib figure
-                    st.pyplot(fig)
+        #             # Display the matplotlib figure
+        #             st.pyplot(fig)
                     
-                    # Clear the figure
-                    plt.close(fig)
-                elif len(weekly_df_filtered) > 0:
-                    st.info(f"Limited data available: only {len(weekly_df_filtered)} weeks with recorded activity")
-                else:
-                    st.info("No weekly data available for this street (all values are zero)")
+        #             # Clear the figure
+        #             plt.close(fig)
+        #         elif len(weekly_df_filtered) > 0:
+        #             st.info(f"Limited data available: only {len(weekly_df_filtered)} weeks with recorded activity")
+        #         else:
+        #             st.info("No weekly data available for this street (all values are zero)")
                 
-            else:
-                st.info("No weekly trend data available for this street")
-        else:
-            st.info("No trend data available for this street")
+        #     else:
+        #         st.info("No weekly trend data available for this street")
+        # else:
+        #     st.info("No trend data available for this street")
         
         # Temporal Analysis Section
         st.markdown("<div style='margin-bottom: 2rem;'></div>", unsafe_allow_html=True)

@@ -440,7 +440,7 @@ def render_hotspot_details_page():
                 # Note: Previous corridor code had: coords_folium = [(coord[1], coord[0]) for coord in row['geometry']]
                 # implying row['geometry'] was [[long, lat], [long, lat]...] 
             
-            if coords:
+            if isinstance(coords, list):
                 has_geometry = True
                 if geom_type == 'Polygon':
                     # Polygon: [[[lon, lat], ...]] (GeoJSON) or [[lon, lat], ...] (Simple)

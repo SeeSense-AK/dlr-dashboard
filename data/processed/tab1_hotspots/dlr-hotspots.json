@@ -275,8 +275,8 @@
     "identification": {
       "cluster_id": 55,
       "street_name": "Stillorgan Road",
-      "latitude": 53.3089715,
-      "longitude": -6.218017983,
+      "latitude": 53.30894184426875,
+      "longitude": -6.217899177880225,
       "geometry_type": "point"
     },
     "scores": {
@@ -292,7 +292,7 @@
       "repeat_users": 1,
       "repeat_user_percentage": 100.0,
       "hazard_type": "mixed_braking_roughness",
-      "event_type": "mixed",
+      "event_type": "Left Hook",
       "braking_events": 101,
       "swerve_events": 12,
       "roughness_events": 173,
@@ -1088,7 +1088,7 @@
       "repeat_users": 8,
       "repeat_user_percentage": 100.0,
       "hazard_type": "mixed_braking_roughness",
-      "event_type": "mixed",
+      "event_type": "Junction Complexity",
       "braking_events": 20,
       "swerve_events": 11,
       "roughness_events": 51,

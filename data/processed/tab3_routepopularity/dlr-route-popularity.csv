@@ -1,4 +1,4 @@
-#,Street Name,Popularity Change,Consistency (R²),Total Volume,Peak,Biggest Spike/Drop,AI Summary,Weather Impact
+ #,Street Name,Popularity Change,Consistency (R²),Total Volume,Peak,Biggest Spike/Drop,AI Summary,Weather Impact
 1,West Pier,Increasing (+360.8 points/week),0.566,"27,356 rides",5 December 2024,"October 28, 2024 (+9,280 in single week)","West Pier isn't just getting busier—it's experiencing a leisure revolution. This 1km granite-built Victorian pier has transformed from maritime utility to Dublin's hottest cycling destination. 
 
 Public excitement about future harbor improvements created immediate interest. Publicity from consultations, boat tours (September 21, 2024), and media coverage (RTE, Irish Times) brought the harbor into public consciousness.
@@ -27,7 +27,7 @@ Public excitement about future harbor improvements created immediate interest. P
 Why It Matters:
 
 West Pier proves that leisure infrastructure investment creates self-reinforcing demand. The mere promise of future improvements (floating café, sauna, better access) drove immediate 360% growth. This is infrastructure speculation in action—cyclists are ""voting early"" for the Dublin they want.","The growth persisted through Storm Bert (Nov 2024) and Storm Darragh (Dec 2024), proving this isn't just fair-weather cycling—it's destination cycling."
-2,Leopardstown Road,Decreasing (-282.9 points/week),0.47,"75,961 rides (previously very popular)",October 2024 (before collapse),"August 19, 2024 (-14,223 in single week)","Leopardstown Road is bleeding cyclists at unprecedented rates. This major route connecting Sandyford Business District to Leopardstown Racecourse has become a no-go zone.
+2,Leopardstown Road,Decreasing (-282.9 points/week),0.47,"75,961 rides",October 2024 (before collapse),"August 19, 2024 (-14,223 in single week)","Leopardstown Road is bleeding cyclists at unprecedented rates. This major route connecting Sandyford Business District to Leopardstown Racecourse has become a no-go zone.
 
 1. Major Residential Developments:
 
@@ -145,7 +145,7 @@ The synchronized drop over Christmas on both Burton Hall Road and Blackthorn Ave
 High cycling rates among this demographic
 -326 pts/week = approximately 1,500-2,000 fewer commuters
 Represents 15-20% of cycling workforce",
-5,Leopardstown Avenue,Increasing (+24.2 points/week),0.28,"5,847 rides",Nov 2024,Oct 2024,"This is a residential street near Leopardstown Road.
+5,Leopardstown Avenue,Increasing (+24.2 points/week),0.28,"15,847 rides",Nov 2024,Oct 2024,"This is a residential street near Leopardstown Road.
 
 1. The Displacement Story:
 
@@ -194,7 +194,6 @@ There may be potential vehicle–cyclist conflicts, highlighting the need for tr
 5. Why Low R² Score Doesn't Mean Bad:
 
 The volatility actually validates success—infrastructure is being used exactly when needed by exactly who needs it (students). A perfectly steady trend would suggest the route isn't serving its intended commuter population.
-Weather Interaction:
 
 6. Connection to Abnormal Events:
 
@@ -203,12 +202,12 @@ Clonskeagh Road does NOT appear in our abnormal events analysis despite massive 
 Why It Matters:
 
 Clonskeagh Road proves context-appropriate infrastructure unlocks latent demand. UCD's 30,000 students were always potential cyclists, but needed safe routes. The June 2024 opening immediately created 15,000-ride weeks by October.",
-7,Nutley Lane,Increasing (+21.1 pts/week),0.0558,"96,116",July 2024,"July 8, 2024","This is a strategic commuter corridor with massive event-driven spikes. The low R² doesn't indicate unreliability—it indicates that Nutley Lane serves multiple distinct user groups with different temporal patterns:
+7,Nutley Lane,Increasing (+21.1 pts/week),0.0558,"96,116 rides",July 2024,"July 8, 2024","This is a strategic commuter corridor with massive event-driven spikes. The low R² doesn't indicate unreliability—it indicates that Nutley Lane serves multiple distinct user groups with different temporal patterns:
 
-Base commuters: Steady daily use (UCD, St. Vincent's Hospital, RTE)
-Event traffic: Massive spikes (Aviva Stadium, UCD academic calendar)
-Weather-responsive cyclists: Seasonal variation
-BusConnects anticipation/disruption: Infrastructure changes
+- Base commuters: Steady daily use (UCD, St. Vincent's Hospital, RTE)
+- Event traffic: Massive spikes (Aviva Stadium, UCD academic calendar)
+- Weather-responsive cyclists: Seasonal variation
+- BusConnects anticipation/disruption: Infrastructure changes
 
 Event Pattern Analysis:
 

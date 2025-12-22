@@ -509,10 +509,10 @@
         "monday": 1963,
         "tuesday": 1695,
         "wednesday": 1221,
-        "thursday": 14,
-        "friday": 25,
-        "saturday": 72,
-        "sunday": 1
+        "Thursday": 14,
+        "Friday": 927,
+        "Saturday": 2001,
+        "Sunday": 1899
       }
     }
   },
