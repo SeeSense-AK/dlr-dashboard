@@ -25,7 +25,7 @@ wheels/
 
 # Streamlit
 .streamlit/secrets.toml
-.streamlit/config.toml
+# .streamlit/config.toml
 
 # Exclude formats
 *.parquet
