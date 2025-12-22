@@ -331,9 +331,9 @@ def create_abnormal_events_map(abnormal_df, segments_df, show_cycleways=False):
     # Create base map
     m = folium.Map(
         location=[center_lat, center_lon],
-        zoom_start=12,
+        zoom_start=15,
         tiles='CartoDB positron',
-        control_scale=True
+        control_scale=False
     )
     
     # Add cycleways if requested
