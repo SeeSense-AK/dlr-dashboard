@@ -72,7 +72,7 @@ def generate_hotspot_insights(hotspot_data: dict, user_comments: list = None) ->
         try:
             # UPDATED: New API call format
             response = gemini_client.models.generate_content(
-                model='gemini-2.0-flash-exp-0827',
+                model='gemini-2.5-flash',
                 contents=prompt
             )
             return parse_ai_response(response.text)
